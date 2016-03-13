@@ -1,5 +1,5 @@
 Blog::Application.routes.draw do
-  devise_for :users
+  devise_for :users, :controllers => {sessions: 'sessions', registrations: 'registrations'}  
   devise_scope :user do
     root 'devise/sessions#new'
   end
